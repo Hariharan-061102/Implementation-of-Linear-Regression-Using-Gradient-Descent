@@ -28,6 +28,7 @@ data=pd.read_csv("student_scores.csv")
 data.head()
 data.isnull().sum()
 x=data.Hours
+x.head()
 y=data.Scores
 y.head()
 n=len(x)
@@ -43,7 +44,6 @@ for i in range(10000):
     c=c-L*dc
     m=m-L*dm
     loss.append(MSE)
-    print(m)
 print(m,c)
 y_pred=m*x+c
 plt.scatter(x,y,color="red")
